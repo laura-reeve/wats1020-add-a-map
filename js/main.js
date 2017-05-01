@@ -8,17 +8,17 @@
 */
 $(document).ready(function() { 
   
-// TODO: Inside of your on ready handler, invoke the Leaflet.js library
-// to draw a map in your `#map-container` div.
+// invoke the Leaflet.js library to draw a map
+  
 var map = L.map('map-container').setView([46.8523, -121.7603], 13);
   
-// Create map
+// create map
   
 var drawLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
   
-// Add layer to map    
+// add layers to map    
   
 var terrainLayer = L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
     attribution: '&copy; <a href="http://osm.org/copyright" title="OpenStreetMap" target="_blank">OpenStreetMap</a> contributors | Tiles Courtesy of <a href="http://www.mapquest.com/" title="MapQuest" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png" width="16" height="16">',
@@ -34,6 +34,7 @@ var mapLayers = {
 }
 
 // controller for map selection
+
 L.control.layers(mapLayers).addTo(map);
 terrainLayer.addTo(map); 
 
@@ -49,8 +50,8 @@ L.marker([46.871, -121.732]).addTo(map)
   .bindPopup("<b>Steamboat Prow</b><br>Hike to this sub-peak and ski the Inter Glacier.")
   .openPopup();
   
-L.marker([46.902, -121.643]).addTo(map)
-  .bindPopup("<b>White River Campground</b><br>Bring your tent and relax or do some hiking.")
+L.marker([46.863, -121.775]).addTo(map)
+  .bindPopup("<b>Liberty Cap</b><br>A small glacier near the summit.")
   .openPopup();
 
          
