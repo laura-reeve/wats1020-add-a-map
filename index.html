@@ -12,15 +12,18 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
         <link rel="stylesheet" href="css/main.css">
-        </head>
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -59,85 +62,45 @@
     <div class="jumbotron">
       <div class="container">
         <h1 id="home">Mt. Ranier Information</h1>
-        <!-- TODO: Create an HTML structure that will trigger the Bootstrap
-                   carousel feature. http://getbootstrap.com/javascript/#carousel
-
-                   Bonus points if you go to the trouble of making nice captions
-                   for the images. If you are using the Mt. Rainier images, then
-                   there are readymade captions available from the Wikipedia
-                   source page. -->
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-           <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-                         
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img src="img/carousel/Mount_Rainier_and_lake_reflection.jpg" alt="Mount Rainier and lake reflection">
-              <div class="carousel-caption">
-                Mount Rainier and lake reflection
-              </div>
-            </div>
-            <div class="item">
-              <img src="img/carousel/Mount_Rainier_sunset_and_clouds.jpg" alt="Mount Rainier sunset and clouds">
-              <div class="carousel-caption">
-                Mount Rainier sunset and clouds
-              </div>
-            </div>
-            <div class="item">
-              <img src="img/carousel/Mount_Rainier_-_Paradise_-_Dead_Horse_Creek_Trail_-_August_2014_-_01.jpg" alt="Mount Rainier Dead Horse Creek Trail August 2014">
-              <div class="carousel-caption">
-                Mount Rainier Dead Horse Creek Trail August 2014
-              </div>
-            </div>
-              <div class="item">
-              <img src="img/carousel/Climbers_Crossing_Crevasse_Mt._rainier.jpg" alt="Climbers crossing crevasse">
-              <div class="carousel-caption">
-                Climbers crossing crevasse
-              </div>
-            </div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="img/carousel/Mount_Rainier_sunset_and_clouds.jpg" alt="Mount Rainier Sunset">
+                  <div class="carousel-caption">
+                    View of Mount Rainier in the setting sun
+                  </div>
+                </div>
                 <div class="item">
-              <img src="img/carousel/Mount_Rainier_-_Paradise_Meadow_in_July_03.jpg" alt="Mount Rainier Paradise Meadow in July 2003">
-              <div class="carousel-caption">
-               Mount Rainier Paradise Meadow in July 2003
-              </div>
-            </div>
+                  <img src="img/carousel/Mount_Rainier_-_Paradise_-_Dead_Horse_Creek_Trail_-_August_2014_-_01.jpg" alt="Hikers on Dead Horse Creek Trail">
+                  <div class="carousel-caption">
+                    Hikers along the Dead Horse Creek Trail - August 2014
+                  </div>
+                </div>
                 <div class="item">
-              <img src="img/carousel/Flickr_-_The_U.S._Army_-_Jump_over_Mt._Rainier.jpg" alt="US Army jump over Mt. Rainier">
-              <div class="carousel-caption">
-               US Army jump over Mt. Rainier 
+                  <img src="img/carousel/Nisqually_River_near_Cougar_Rock_01.jpg" alt="View of Mount Rainier from the Nisqually River">
+                  <div class="carousel-caption">
+                    View of Mount Rainier from the Nisqually River near Cougar Rock
+                  </div>
+                </div>
+              </div>
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-            </div>
-               <div class="item">
-              <img src="img/carousel/Mount_Rainier_from_Paradise_meadow,_August_2014_-_03.jpg" alt="Mount Rainier from Paradise Meadow in August 2014">
-              <div class="carousel-caption">
-               Mount Rainier from Paradise Meadow in August 2014
-                 </div>
-            </div>
-              <div class="item">
-              <img src="img/carousel/Nisqually_River_near_Cougar_Rock_01.jpg" alt="Niqsqually River near Cougar Rock">
-              <div class="carousel-caption">
-               Niqsqually River near Cougar Rock
-          </div>
-            </div>
-            </div>
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-      </div>
-      </div>
+        </div>
     </div>
 
     <div class="container">
@@ -146,24 +109,22 @@
         <br>
         &mdash; John Muir, Naturalist
       </blockquote>
-      
-  <div id="about" role="tabpanel"> 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#description" aria-controls="home" role="tab" data-toggle="tab">About</a></li>
-    <li role="presentation"><a href="#history" aria-controls="profile" role="tab" data-toggle="tab">History</a></li>
-    <li role="presentation"><a href="#stats" aria-controls="messages" role="tab" data-toggle="tab">Statistics</a></li>
-    <li role="presentation"><a href="#map" aria-controls="settings" role="tab" data-toggle="tab">Map</a></li>
-    <li role="presentation"><a href="#links" aria-controls="settings" role="tab" data-toggle="tab">Links</a></li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="description">
+      <div id="about" role="tabpanel">
+        <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#description" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+          <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">History</a></li>
+          <li role="presentation"><a href="#stats" aria-controls="statistics" role="tab" data-toggle="tab">Statistics</a></li>
+          <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">Map</a></li>
+          <li role="presentation"><a href="#links" aria-controls="links" role="tab" data-toggle="tab">Links</a></li>
+        </ul>
+        <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="description">
           <h2>About</h2>
           <p>Mount Rainier (pronounced: <b>/reɪˈnɪər/</b>) is the highest mountain of the Cascade Range of the Pacific Northwest, and the highest mountain in the state of Washington. It is a large active stratovolcano located 54 miles (87 km) southeast of Seattle. It is the most topographically prominent mountain in the contiguous United States and the Cascade Volcanic Arc, with a summit elevation of 14,411 ft (4,392 m).[1][2] Mt. Rainier is considered one of the most dangerous volcanoes in the world, and it is on the Decade Volcano list. Because of its large amount of glacial ice, Mt. Rainier could potentially produce massive lahars that could threaten the entire Puyallup River valley.</p>
         </div>
-        <div role="tabpanel" class="tab-pane fade" id="history">
+        <div role="tabpanel" class="tab-pane" id="history">
           <h2>History</h2>
           <p>At the time of European contact, the river valleys and other areas near the mountain were inhabited by many Pacific Northwest tribes who hunted and gathered berries in its forests and mountain meadows. These included the Nisqually, Cowlitz, Yakama, Puyallup, and Muckleshoot.</p>
 
@@ -175,65 +136,77 @@
 
           <p>Citing the need to also protect scenery and provide for public enjoyment, railroads and local businesses urged the creation of a national park in hopes of increased tourism. On March 2, 1899, President William McKinley established Mount Rainier National Park as America's fifth national park. Congress dedicated the new park "for the benefit and enjoyment of the people" and "... for the preservation from injury or spoliation of all timber, mineral deposits, natural curiosities, or wonders within said park, and their retention in their natural condition."</p>
         </div>
-        <div role="tabpanel" class="tab-pane fade" id="stats">
-          <!-- TODO: Use CSS to enhance the look of these statistics. Feel free to
-                      enhance the HTML if you need to. -->
+        <div role="tabpanel" class="tab-pane" id="stats">
           <h2>Statistics</h2>
-          <dl>
-            <dt>Elevation</dt>
-            <dd>14,411 ft (4,392 m)</dd>
-            <dt>Prominence</dt>
-            <dd>13,211 ft (4,027 m)</dd>
-            <dt>Range</dt>
-            <dd>Cascade Range</dd>
-            <dt>Type</dt>
-            <dd>Stratovolcano</dd>
-            <dt>Age of Rock</dt>
-            <dd>500,000 years</dd>
-            <dt>Last Eruption</dt>
-            <dd>November to December, 1894</dd>
-            <dt>First Ascent</dt>
-            <dd>1870 by Hazard Stevens and P. B. Van Trump</dd>
-            <dt>Easiest Route</dt>
-            <dd>Rock/ice climb via Disappointment Cleaver</dd>
-          </dl>
+          <table class="table table-striped">
+          <tbody>
+            <tr>
+            <td>Elevation</td>
+            <td>14,411 ft (4,392 m)</td>
+            </tr>
+            <tr>
+            <td>Prominence</td>
+            <td>13,211 ft (4,027 m)</td>
+            </tr>
+            <tr>
+            <td>Range</td>
+            <td>Cascade Range</td>
+            </tr>
+            <tr>
+            <td>Type</td>
+            <td>Stratovolcano</td>
+            </tr>
+            <tr>
+            <td>Age of Rock</td>
+            <td>500,000 years</td>
+            </tr>
+            <tr>
+            <td>Last Eruption</td>
+            <td>November to December, 1894</td>
+            </tr>
+            <tr>
+            <td>First Ascent</td>
+            <td>1870 by Hazard Stevens and P. B. Van Trump</td>
+            </tr>
+            <tr>
+            <td>Easiest Route</td>
+            <td>Rock/ice climb via Disappointment Cleaver</td>
+            </tr>
+          </tbody>
+          </table>
         </div>
 
-      <div role="tabpanel" class="tab-pane fade" id="map">
+      <div role="tabpanel" class="tab-pane" id="map">
         <h2>Map</h2>
         <!-- TODO: Use Leaflet.js to add a map showing Mt. Rainier's location
                     http://leafletjs.com/examples/quick-start.html -->
-        <div id="map-container">
-        
-        
-        </div>
+        <div id="map-container"></div>
       </div>
 
-      <div role="tabpanel" class="tab-pane fade" id="links">
+      <div role="tabpanel" class="tab-pane" id="links">
         <h2>Links</h2>
         <p class="lead">Learn more about Mt. Rainier by visiting these websites:</p>
         <ul class="links-list">
-          <li><a href="http://www.nps.gov/mora/index.htm">Mt. Rainier National Parks Page</a></li>
-          <li><a href="http://en.wikipedia.org/wiki/Mount_Rainier">Mt. Rainier Wikipedia Page</a></li>
-          <li><a href="http://visitrainier.com/">Mt. Rainier Tourism Page</a></li>
-          <li><a href="https://content.lib.washington.edu/warnerweb/essay.html">John Muir's Ascent of Mt. Rainier</a></li>
+          <li><a href="http://www.nps.gov/mora/index.htm" target="_blank">Mt. Rainier National Parks Page</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Mount_Rainier" target="_blank">Mt. Rainier Wikipedia Page</a></li>
+          <li><a href="http://visitrainier.com/" target="_blank">Mt. Rainier Tourism Page</a></li>
+          <li><a href="https://content.lib.washington.edu/warnerweb/essay.html" target="_blank">John Muir's Ascent of Mt. Rainier</a></li>
         </ul>
       </div>
-</div> <!--tabs div 2-->
-</div> <!--tabs div 1-->
+    </div>
+  </div>
       <hr>
+
       <footer>
-        <p>Made by Laura Reeve in 2017. This page uses images and text from <a href="http://en.wikipedia.org/wiki/Mount_Rainier">The Wikipedia Mt. Rainier Page</a>.</p>
+        <p>Made by Laura Reeve in 2017. This page uses images and text from <a href="http://en.wikipedia.org/wiki/Mount_Rainier" target="_blank">The Wikipedia Mt. Rainier Page</a>.</p>
       </footer>
     </div> <!-- /container -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-        <!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> -->
-    
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
         <script src="js/main.js"></script>
     </body>
 </html>
