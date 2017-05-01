@@ -53,24 +53,6 @@ L.marker([46.871, -121.732]).addTo(map)
 L.marker([46.863, -121.775]).addTo(map)
   .bindPopup("<b>Liberty Cap</b><br>A small glacier near the summit.")
   .openPopup();
-
-         
+  
+  
 });
-
-   
-  // Customize that Map to show markers with popups at no fewer than 3
-  // interesting locations. 
-/*   
-L.marker([46.852, -121.760]).addTo(map)
-bindPopup("<b>Welcome to Mt. Rainier!</b><br>This peak is 4,392 feet high.")
-openPopup();
-
-L.marker([46.871, -121.732]).addTo(map)
-bindPopup("<b>Steamboat Prow</b><br>Hike to this sub-peak and ski the Inter Glacier.")
-openPopup();
-   
-L.marker([46.902, -121.643]).addTo(map)
-bindPopup("<b>White River Campground</b><br>Bring your tent and relax or do some hiking.")  
-openPopup();  
- 
- });*/
