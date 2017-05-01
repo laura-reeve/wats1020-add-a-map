@@ -2,7 +2,13 @@
    Author's custom styles
    ========================================================================== */
 
-#map-container { height: 180px; }
+#map-container { 
+  height: 300px; 
+}
+
+h1 {
+  color: red;
+}
 
 
 
